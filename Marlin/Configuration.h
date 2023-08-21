@@ -1360,7 +1360,7 @@
  *    - Normally-closed (NC) also connect to GND.
  *    - Normally-open (NO) also connect to 5V.
  */
-#define Z_MIN_PROBE_PIN ^PC14
+#define Z_MIN_PROBE_PIN PC14 //Base Config
 
 /**
  * Probe Type
@@ -1402,7 +1402,7 @@
 /**
  * The BLTouch probe uses a Hall effect sensor and emulates a servo.
  */
-#define BLTOUCH
+#define BLTOUCH // Base Config
 
 /**
  * MagLev V4 probe by MDD
@@ -1554,7 +1554,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -44, -7, 0 }
+#define NOZZLE_TO_PROBE_OFFSET { -44, -7, 0 } // Base Config
 
 // Enable and set to use a specific tool for probing. Disable to allow any tool.
 #define PROBING_TOOL 0
@@ -1608,7 +1608,7 @@
  */
 #define PROBE_ENABLE_DISABLE
 #if ENABLED(PROBE_ENABLE_DISABLE)
-  #define PROBE_ENABLE_PIN ^PA1   // Override the default pin here
+  #define PROBE_ENABLE_PIN PA1   // Override the default pin here
 #endif
 
 /**
@@ -1823,7 +1823,7 @@
 #if ENABLED(MIN_SOFTWARE_ENDSTOPS)
   #define MIN_SOFTWARE_ENDSTOP_X
   #define MIN_SOFTWARE_ENDSTOP_Y
-  //#define MIN_SOFTWARE_ENDSTOP_Z //By disabling it allows Z to go below zero
+  //#define MIN_SOFTWARE_ENDSTOP_Z //By disabling it allows Z to go below zero // Base Config
   #define MIN_SOFTWARE_ENDSTOP_I
   #define MIN_SOFTWARE_ENDSTOP_J
   #define MIN_SOFTWARE_ENDSTOP_K
@@ -2006,9 +2006,9 @@
  */
 //#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
-#define AUTO_BED_LEVELING_BILINEAR
+#define AUTO_BED_LEVELING_BILINEAR // Base Config
 //#define AUTO_BED_LEVELING_UBL
-//#define MESH_BED_LEVELING
+//#define MESH_BED_LEVELING // Base Config Commented Out
 
 /**
  * Normally G28 leaves leveling disabled on completion. Enable one of
@@ -2251,7 +2251,7 @@
  * - Allows Z homing only when XY positions are known and trusted.
  * - If stepper drivers sleep, XY homing may be required again before Z homing.
  */
-#define Z_SAFE_HOMING
+#define Z_SAFE_HOMING // Base Config
 
 #if ENABLED(Z_SAFE_HOMING)
   #define Z_SAFE_HOMING_X_POINT X_CENTER  // X point for Z homing
@@ -2344,7 +2344,7 @@
 #define EEPROM_BOOT_SILENT    // Keep M503 quiet and only give errors during first load
 #if ENABLED(EEPROM_SETTINGS)
   #define EEPROM_AUTO_INIT    // Init EEPROM automatically on any errors.
-  #define EEPROM_INIT_NOW   // Init EEPROM on first boot after a new build.
+  #define EEPROM_INIT_NOW   // Init EEPROM on first boot after a new build. // Base Config
 #endif
 
 // @section host
